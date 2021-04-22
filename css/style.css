@@ -1,0 +1,165 @@
+    /* START GOLOBAL RULES */
+    
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --Red: hsl(0, 78%, 62%);
+        --Cyan: hsl(180, 62%, 55%);
+        --Orange: hsl(34, 97%, 64%);
+        --Blue: hsl(212, 86%, 64%);
+        --Very-Dark-Blue: hsl(234, 12%, 34%);
+        --Grayish-Blue: hsl(229, 6%, 66%);
+        --Very-Light-Gray: hsl(0, 0%, 98%);
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        background: var(--Very-Light-Gray);
+        font-size: 15px;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @media (min-width:1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+    /* END GLOBAL RULES */
+    /*start intro*/
+    
+    .intro-text {
+        padding: 40px;
+        width: 525px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    @media (max-width:530px) {
+        .intro-text {
+            width: 400px;
+        }
+    }
+    
+    .intro-text h1:first-of-type {
+        color: var(--Very-Dark-Blue, #777);
+        font-weight: 200;
+    }
+    
+    .intro-text h1:nth-of-type(2) {
+        font-weight: 600;
+        color: var(--Very-Dark-Blue, #777);
+    }
+    
+    .intro-text p {
+        font-weight: 400;
+        color: var(--Grayish-Blue);
+        line-height: 1.6;
+        margin-top: 15px;
+    }
+    /* end intro*/
+    /*start the cards*/
+    
+    .four-cards {
+        margin-top: -20;
+    }
+    
+    .four-cards .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .four-cards .container div {
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        background-color: #fff;
+        margin: 15px 15px;
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(163, 164, 174, 0.4);
+        overflow: hidden;
+    }
+    
+    @media (max-width:1020px) {
+        .four-cards .container div:first-of-type,
+        .four-cards .container div:nth-of-type(3) {
+            transform: translateY(0);
+        }
+    }
+    
+    .four-cards .container div img {
+        transform: translate(185 px, 30px);
+    }
+    
+    .four-cards .container div h3 {
+        color: var(--Very-Dark-Blue);
+        font-weight: 600;
+        margin: 0;
+    }
+    
+    .four-cards .container div p {
+        font-weight: 400;
+        color: var(--Grayish-Blue);
+        line-height: 1.6;
+        margin-top: 5px;
+        font-size: 13px;
+    }
+    
+    .four-cards .container div:first-of-type::after {
+        width: 100%;
+        height: 4px;
+        content: "";
+        background-color: var(--Cyan);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .four-cards .container div:nth-of-type(2)::after {
+        width: 100%;
+        height: 4px;
+        content: "";
+        background-color: var(--Red);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .four-cards .container div:nth-of-type(3)::after {
+        width: 100%;
+        height: 4px;
+        content: "";
+        background-color: var(--Orange);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .four-cards .container div:nth-of-type(4)::after {
+        width: 100%;
+        height: 4px;
+        content: "";
+        background-color: var(--Blue);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /*end the cards*/
+    /* extra classes*/
+    
+    .trans {
+        transform: translateY(50%);
+    }
+    /*end extra classes
